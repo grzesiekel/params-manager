@@ -41,5 +41,25 @@
         <x-sidebar-link :href="route('admin.users.index')" :active="request()->routeIs('admin.users.index')">
             {{ __('Users') }}
         </x-sidebar-link>
+        
+        <div class="flex flex items-center px-6 py-2 mt-4 text-gray-500 bg-opacity-25">
+            <div x-data="{ open: false }">
+                <button @click="open = !open" class="w-full text-left">Users administration</button>
+                <div x-show="open">
+                <x-sidebar-link :href="route('admin.roles.index')" :active="request()->routeIs('admin.roles.index')">
+                    {{ __('Roles') }}
+                </x-sidebar-link>
+        
+                <x-sidebar-link :href="route('admin.permissions.index')" :active="request()->routeIs('admin.permissions.index')">
+                    {{ __('Permissions') }}
+                </x-sidebar-link>
+                <x-sidebar-link :href="route('admin.users.index')" :active="request()->routeIs('admin.users.index')">
+                    {{ __('Users') }}
+                </x-sidebar-link>
+                </div>
+            
+            </div>
+            
+        </div>
     </nav>
 </div>
