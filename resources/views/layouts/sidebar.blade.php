@@ -31,8 +31,8 @@
 
             <span class="mx-3">Dashboard</span>
         </a>
-        <x-sidebar-link :href="route('admin.roles.index')" :active="request()->routeIs('admin.roles.index')">
-            {{ __('Roles') }}
+        <x-sidebar-link :href="route('admin.orders.index')" :active="request()->routeIs('admin.orders.index')">
+            {{ __('Zamówienia') }}
         </x-sidebar-link>
 
         <x-sidebar-link :href="route('admin.permissions.index')" :active="request()->routeIs('admin.permissions.index')">
